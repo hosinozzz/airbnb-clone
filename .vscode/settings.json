@@ -1,0 +1,10 @@
+{
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.enabled": true,
+  "python.formatting.provider":"black",
+  "python.linting.flake8Args": ["--max-line-length"],
+  "python.languageServer": "Default",
+  "python.pythonPath":
+  "C:\\Users\\KARUIKANE\\.virtualenvs\\airbnb-clone-aAphIwZV\\Scripts\\python.exe",
+  }
