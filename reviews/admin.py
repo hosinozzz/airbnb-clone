@@ -7,7 +7,4 @@ class ReviewAdmin(admin.ModelAdmin):
 
     """Review Admin Definition"""
 
-    pass
-
-
-# Register your models here.
+    list_display = ("__str__", "rating_average")
