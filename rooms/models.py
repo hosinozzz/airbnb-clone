@@ -1,11 +1,11 @@
 from django.db import models
+from django.urls import reverse
 from django_countries.fields import CountryField
 from core import models as core_models
 
 
-class AbstarctItem(core_models.TimeStampedModel):
-
-    """Abstart Item"""
+class AbstractItem(core_models.TimeStampedModel):
+    """Abstract Item"""
 
     name = models.CharField(max_length=80)
 
@@ -16,29 +16,30 @@ class AbstarctItem(core_models.TimeStampedModel):
         return self.name
 
 
-class RoomType(AbstarctItem):
+class RoomType(AbstractItem):
+    """RoomType Model Definition"""
+
     class Meta:
         verbose_name = "Room Type"
 
 
-class Amenity(AbstarctItem):
-
+class Amenity(AbstractItem):
     """Amenity Model Definition"""
 
     class Meta:
         verbose_name_plural = "Amenities"
 
 
-class Facility(AbstarctItem):
-
+class Facility(AbstractItem):
     """Facility Model Definition"""
+
+    pass
 
     class Meta:
         verbose_name_plural = "Facilities"
 
 
-class HouseRule(AbstarctItem):
-
+class HouseRule(AbstractItem):
     """HouseRule Model Definition"""
 
     class Meta:
@@ -46,7 +47,6 @@ class HouseRule(AbstarctItem):
 
 
 class Photo(core_models.TimeStampedModel):
-
     """Photo Model Definition"""
 
     caption = models.CharField(max_length=80)
@@ -58,7 +58,6 @@ class Photo(core_models.TimeStampedModel):
 
 
 class Room(core_models.TimeStampedModel):
-
     """Room Model Definition"""
 
     name = models.CharField(max_length=140)
@@ -90,6 +89,9 @@ class Room(core_models.TimeStampedModel):
     def save(self, *args, **kwargs):
         self.city = str.capitalize(self.city)
         super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse("rooms:detail", kwargs={"pk": self.pk})
 
     def total_rating(self):
         all_reviews = self.reviews.all()
