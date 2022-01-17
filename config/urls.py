@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -6,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include("core.urls", namespace="core")),
+    path("rooms/", include("rooms.urls", namespace="rooms")),
     path("admin/", admin.site.urls),
 ]
 
