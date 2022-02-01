@@ -15,6 +15,11 @@
 .btn {
   @apply text-center rounded-sm py-5 font-light text-lg w-full;
 }
+
+.btn-link {
+  @apply text-center py-3 rounded-lg font-light text-lg w-full text-white bg-red-500;
+}
+
 input {
   @apply rounded-sm py-5 font-light text-lg w-full text-left border border-gray-600 px-5;
   &:focus {
@@ -34,7 +39,6 @@ form {
     }
   }
 }
-
 @keyframes messageFadeIn {
   0% {
     opacity: 0;
@@ -53,7 +57,6 @@ form {
     transform: translateY(-50px);
   }
 }
-
 .message {
   animation: messageFadeIn 5s ease-in-out forwards;
   &.error {
@@ -69,5 +72,4 @@ form {
     @apply bg-yellow-400;
   }
 }
-
 @tailwind utilities;
