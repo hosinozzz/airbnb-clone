@@ -1,9 +1,7 @@
-<ul class="flex items-center text-sm font-medium h-full">
-    {% if user.is_authenticated %}
-        <li class="nav_link"><a href="{{user.get_absolute_url}}">Profile</a></li>
-        <li class="nav_link"><a href="{% url "users:logout" %}">Log out</a></li>
-    {% else %}
-        <li class="nav_link"><a href="{% url "users:login" %}">Log in</a></li>
-        <li class="nav_link"><a href="{% url "users:signup" %}">Sign up</a></li>
-    {% endif %}
-</ul>
+{% if messages %}
+    <ul class="absolute top-0 mx-auto left-0 right-0 flex justify-center">
+        {% for message in messages %}
+            <li class="message font-medium bg-gray-700 z-10 rounded-full text-white py-4 px-6 w-3/12 text-center {% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
