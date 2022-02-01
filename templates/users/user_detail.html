@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block page_title %}
+<<<<<<< HEAD
     {{user_obj.first_name}}'s Profile
+=======
+    Log In
+>>>>>>> 97120739df352679e2d7faad4ec5b113d291d825
 {% endblock page_title %}
 
 {% block content %}
@@ -9,6 +13,7 @@
     <div class="container lg:w-5/12 md:w-1/2 xl:w-1/4 mx-auto my-10 flex flex-col items-center border p-6 border-gray-400">
 
 
+<<<<<<< HEAD
         {% include "mixins/user_avatar.html" with user=user_obj %}
 
         <div class="flex items-center">
@@ -23,6 +28,9 @@
         <a href="#" class="btn">Edit Profile</a>
 
 
+=======
+        {{user_obj.first_name}}
+>>>>>>> 97120739df352679e2d7faad4ec5b113d291d825
 
     </div>
 {% endblock content %}
