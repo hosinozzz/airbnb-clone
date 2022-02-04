@@ -19,12 +19,12 @@ msgstr ""
 
 #: .\templates\base.html:24
 msgid "Search By City"
-msgstr ""
+msgstr "都市を検索"
 
 #: .\templates\partials\footer.html:4
 msgid "Please don't copy us."
-msgstr ""
+msgstr "当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます（例文）"
 
 #: .\templates\partials\footer.html:6
 msgid "All rights reserved"
-msgstr ""
+msgstr "本サイトにおいて掲載されているすべての内容の著作権は、当社に帰属するか、当社が著作権者より許諾を得て使用しているものです。（例文）"
