@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-04 22:14+0900\n"
+"POT-Creation-Date: 2022-02-05 00:13+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,15 +16,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\templates\base.html:24
 msgid "Search By City"
 msgstr "都市を検索"
 
-#: .\templates\partials\footer.html:4
+#: .\templates\partials\footer.html:5
 msgid "Please don't copy us."
-msgstr "当サイトの内容、テキスト、画像等の無断転載・無断使用を固く禁じます（例文）"
+msgstr "無断コピーはダメです（　＾ω＾）・・・"
 
-#: .\templates\partials\footer.html:6
+#: .\templates\partials\footer.html:7
 msgid "All rights reserved"
-msgstr "本サイトにおいて掲載されているすべての内容の著作権は、当社に帰属するか、当社が著作権者より許諾を得て使用しているものです。（例文）"
+msgstr "テスト用です。"
