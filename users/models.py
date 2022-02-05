@@ -9,6 +9,8 @@ from django.shortcuts import reverse
 from django.template.loader import render_to_string
 from core import managers as core_managers
 
+# Create your models here.
+
 
 class User(AbstractUser):
     """Custom User Model"""
@@ -16,36 +18,44 @@ class User(AbstractUser):
     GENDER_MALE = "male"
     GENDER_FEMALE = "female"
     GENDER_OTHER = "other"
+
     GENDER_CHOICES = (
         (GENDER_MALE, _("Male")),
         (GENDER_FEMALE, _("Female")),
-        (GENDER_OTHER, _("Other")),
+        (GENDER_OTHER, _("Others")),
     )
+
     LANGUAGE_ENGLISH = "en"
     LANGUAGE_KOREAN = "kr"
+
     LANGUAGE_CHOICES = (
         (LANGUAGE_ENGLISH, _("English")),
         (LANGUAGE_KOREAN, _("Korean")),
     )
+
     CURRENCY_USD = "usd"
     CURRENCY_KRW = "krw"
+
     CURRENCY_CHOICES = ((CURRENCY_USD, "USD"), (CURRENCY_KRW, "KRW"))
+
     LOGIN_EMAIL = "email"
     LOGIN_GITHUB = "github"
-    LOGING_KAKAO = "kakao"
+    LOGIN_KAKAO = "kakao"
+
     LOGIN_CHOICES = (
         (LOGIN_EMAIL, "Email"),
         (LOGIN_GITHUB, "Github"),
-        (LOGING_KAKAO, "Kakao"),
+        (LOGIN_KAKAO, "Kakao"),
     )
+
     avatar = models.ImageField(upload_to="avatars", blank=True)
     gender = models.CharField(
         _("gender"), choices=GENDER_CHOICES, max_length=10, blank=True
-    )
-    bio = models.TextField(_("bio"), blank=True)
-    birthdate = models.DateField(blank=True, null=True)
+    )  # _()로 gettext_lazy를 호출
+    bio = models.TextField(blank=True)
+    birthdate = models.DateField(null=True, blank=True)
     language = models.CharField(
-        _("language"),
+        _("language"),  # _()로 gettext_lazy를 호출
         choices=LANGUAGE_CHOICES,
         max_length=2,
         blank=True,
@@ -60,7 +70,7 @@ class User(AbstractUser):
     login_method = models.CharField(
         max_length=50, choices=LOGIN_CHOICES, default=LOGIN_EMAIL
     )
-    objects = core_managers.CustomModelManager()
+    objects = core_managers.CustomUserManager()
 
     def get_absolute_url(self):
         return reverse("users:profile", kwargs={"pk": self.pk})
