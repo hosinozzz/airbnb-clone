@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-05 21:50+0900\n"
+"POT-Creation-Date: 2022-02-05 22:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,38 @@ msgstr "無断コピーはご遠慮ください。"
 #: .\templates\partials\footer.html:7
 msgid "All rights reserved"
 msgstr "テスト用です。"
+
+#: .\templates\partials\nav.html:7
+msgid "Stop hosting"
+msgstr "ホスティングを中止"
+
+#: .\templates\partials\nav.html:9
+msgid "Start hosting"
+msgstr "ホスティングをスタート"
+
+#: .\templates\partials\nav.html:14
+msgid "Create Room"
+msgstr "部屋を登録"
+
+#: .\templates\partials\nav.html:16
+msgid "Profile"
+msgstr "プロフィール"
+
+#: .\templates\partials\nav.html:17
+msgid "Log out"
+msgstr "ログアウト"
+
+#: .\templates\partials\nav.html:19
+msgid "Log in"
+msgstr "ログイン"
+
+#: .\templates\partials\nav.html:20
+msgid "Sign up"
+msgstr "サインアップ"
+
+#: .\templates\rooms\room_detail.html:28
+msgid "Save to Favourites"
+msgstr "お気に入り保存"
 
 #: .\templates\rooms\room_list.html:24
 #, python-format
