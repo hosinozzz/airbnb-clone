@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-05 00:13+0900\n"
+"POT-Creation-Date: 2022-02-05 21:50+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,8 +24,53 @@ msgstr "都市を検索"
 
 #: .\templates\partials\footer.html:5
 msgid "Please don't copy us."
-msgstr "無断コピーはダメです（　＾ω＾）・・・"
+msgstr "無断コピーはご遠慮ください。"
 
 #: .\templates\partials\footer.html:7
 msgid "All rights reserved"
 msgstr "テスト用です。"
+
+#: .\templates\rooms\room_list.html:24
+#, python-format
+msgid "Page %(current_page)s of %(total_pages)s"
+msgstr "ページ%(total_pages)sの%(current_page)s"
+
+#: .\users\mixins.py:22
+msgid "Can't go there"
+msgstr "接近ができません。"
+
+#: .\users\models.py:19
+msgid "Male"
+msgstr "男性"
+
+#: .\users\models.py:20
+msgid "Female"
+msgstr "女性"
+
+#: .\users\models.py:21
+msgid "Other"
+msgstr "その他"
+
+#: .\users\models.py:26
+msgid "English"
+msgstr "英語"
+
+#: .\users\models.py:27
+msgid "Korean"
+msgstr "日本語"
+
+#: .\users\models.py:42
+msgid "gender"
+msgstr "性別"
+
+#: .\users\models.py:44
+msgid "bio"
+msgstr "プロフィール"
+
+#: .\users\models.py:47
+msgid "language"
+msgstr "言語"
+
+#: .\users\models.py:74
+msgid "Verify Airbnb Account"
+msgstr "アカウント認証"
