@@ -14,7 +14,7 @@ django-dotenv = "*"
 requests = "*"
 pipenv-to-requirements = "*"
 psycopg2-binary = "*"
-sentry-sdk = "*"
+sentry-sdk = "==1.5.4"
 
 [dev-packages]
 flake8 = "*"
