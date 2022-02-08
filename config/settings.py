@@ -182,7 +182,7 @@ LANGUAGE_COOKIE_NAME = "django_language"
 
 if not DEBUG:
     sentry_sdk.init(
-        dsn=("SENTRY_URL"),
+        dsn=os.environ.get("SENTRY_URL"),
         integrations=[DjangoIntegration()],
         send_default_pii=True,
     )
