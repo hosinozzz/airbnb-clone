@@ -90,7 +90,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-if DEBUG
+if DEBUG:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -182,6 +182,7 @@ LANGUAGE_COOKIE_NAME = "django_language"
 
 if not DEBUG:
     sentry_sdk.init(
-    dsn=("SENTRY_URL"),
-    integrations=[DjangoIntegration(), send_default_pii=True,]
+        dsn=("SENTRY_URL"),
+        integrations=[DjangoIntegration()],
+        send_default_pii=True,
     )
