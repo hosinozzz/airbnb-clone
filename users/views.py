@@ -184,14 +184,14 @@ def kakao_callback(request):
         profile_image = properties.get("profile_image_url")
         try:
             user = models.User.objects.get(email=email)
-            if user.login_method != models.User.LOGING_KAKAO:
+            if user.login_method != models.User.LOGIN_KAKAO:
                 raise KakaoException(f"Please log in with: {user.login_method}")
         except models.User.DoesNotExist:
             user = models.User.objects.create(
                 email=email,
                 username=email,
                 first_name=nickname,
-                login_method=models.User.LOGING_KAKAO,
+                login_method=models.User.LOGIN_KAKAO,
                 email_verified=True,
             )
             user.set_unusable_password()
