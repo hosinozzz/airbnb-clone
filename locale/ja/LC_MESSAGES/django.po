@@ -24,7 +24,7 @@ msgstr "都市を検索"
 
 #: .\templates\partials\footer.html:5
 msgid "Please don't copy us."
-msgstr "無断コピーはご遠慮ください。"
+msgstr "ポートフォリオ。"
 
 #: .\templates\partials\footer.html:7
 msgid "All rights reserved"
@@ -65,7 +65,7 @@ msgstr "お気に入り保存"
 #: .\templates\rooms\room_list.html:24
 #, python-format
 msgid "Page %(current_page)s of %(total_pages)s"
-msgstr "ページ%(total_pages)sの%(current_page)s"
+msgstr "ページ%(total_pages)s の %(current_page)s"
 
 #: .\users\mixins.py:22
 msgid "Can't go there"
