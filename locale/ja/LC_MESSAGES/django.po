@@ -28,7 +28,7 @@ msgstr "ポートフォリオ。"
 
 #: .\templates\partials\footer.html:7
 msgid "All rights reserved"
-msgstr "テスト用です。"
+msgstr "テスト用です"
 
 #: .\templates\partials\nav.html:7
 msgid "Stop hosting"
